@@ -38,6 +38,10 @@ export default {
     defineRule('alpha_spaces', alphaSpaces);
 
     configure({
+      validateOnBlur: true,
+      validateOnChange: true,
+      validateOnInput: false,
+      validateOnModelUpdate: true,
       generateMessage: (ctx) => {
         const messages = {
           required: `The field ${ctx.field} is required.`,

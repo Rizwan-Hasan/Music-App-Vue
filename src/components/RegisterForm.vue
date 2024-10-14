@@ -1,7 +1,7 @@
 <template>
   <!-- Registration Form -->
   <div
-    class="text-white text-center font-bold p-4 rounded mb-4"
+    class="mb-4 rounded p-4 text-center font-bold text-white"
     v-if="reg_show_alert"
     v-bind:class="reg_alert_variant"
   >
@@ -14,46 +14,46 @@
   >
     <!-- Name -->
     <div class="mb-3">
-      <label class="inline-block mb-2">Name</label>
+      <label class="mb-2 inline-block">Name</label>
       <vee-field
         as="input"
         name="name"
         type="text"
-        class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
+        class="block w-full rounded border border-gray-300 px-3 py-1.5 text-gray-800 transition duration-500 focus:border-black focus:outline-none"
         placeholder="Enter Name"
       />
       <vee-error-message class="text-red-600" name="name" />
     </div>
     <!-- Email -->
     <div class="mb-3">
-      <label class="inline-block mb-2">Email</label>
+      <label class="mb-2 inline-block">Email</label>
       <vee-field
         as="input"
         name="email"
         type="email"
-        class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
+        class="block w-full rounded border border-gray-300 px-3 py-1.5 text-gray-800 transition duration-500 focus:border-black focus:outline-none"
         placeholder="Enter Email"
       />
       <vee-error-message class="text-red-600" name="email" />
     </div>
     <!-- Age -->
     <div class="mb-3">
-      <label class="inline-block mb-2">Age</label>
+      <label class="mb-2 inline-block">Age</label>
       <vee-field
         as="input"
         name="age"
         type="number"
-        class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
+        class="block w-full rounded border border-gray-300 px-3 py-1.5 text-gray-800 transition duration-500 focus:border-black focus:outline-none"
       />
       <vee-error-message class="text-red-600" name="age" />
     </div>
     <!-- Password -->
     <div class="mb-3">
-      <label class="inline-block mb-2">Password</label>
+      <label class="mb-2 inline-block">Password</label>
       <vee-field name="password" v-bind:bails="false" v-slot="{ field, errors }">
         <input
           type="password"
-          class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
+          class="block w-full rounded border border-gray-300 px-3 py-1.5 text-gray-800 transition duration-500 focus:border-black focus:outline-none"
           placeholder="Password"
           v-bind="field"
         />
@@ -64,23 +64,23 @@
     </div>
     <!-- Confirm Password -->
     <div class="mb-3">
-      <label class="inline-block mb-2">Confirm Password</label>
+      <label class="mb-2 inline-block">Confirm Password</label>
       <vee-field
         as="input"
         name="confirm_password"
         type="password"
-        class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
+        class="block w-full rounded border border-gray-300 px-3 py-1.5 text-gray-800 transition duration-500 focus:border-black focus:outline-none"
         placeholder="Confirm Password"
       />
       <vee-error-message class="text-red-600" name="confirm_password" />
     </div>
     <!-- Country -->
     <div class="mb-3">
-      <label class="inline-block mb-2">Country</label>
+      <label class="mb-2 inline-block">Country</label>
       <vee-field
         as="select"
         name="country"
-        class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition duration-500 focus:outline-none focus:border-black rounded"
+        class="block w-full rounded border border-gray-300 px-3 py-1.5 text-gray-800 transition duration-500 focus:border-black focus:outline-none"
       >
         <option disabled default>Select country</option>
         <option value="USA">USA</option>
@@ -97,7 +97,7 @@
         name="tos"
         value="1"
         type="checkbox"
-        class="w-4 h-4 float-left -ml-6 mt-1 rounded"
+        class="float-left -ml-6 mt-1 h-4 w-4 rounded"
       />
       <vee-error-message class="text-red-600" name="tos" />
       <label class="inline-block">Accept terms of service</label>
@@ -105,7 +105,7 @@
     <!-- Submit -->
     <button
       type="submit"
-      class="block w-full bg-purple-600 text-white py-1.5 px-3 rounded transition hover:bg-purple-700"
+      class="block w-full rounded bg-purple-600 px-3 py-1.5 text-white transition hover:bg-purple-700"
       v-bind:disabled="reg_in_submission"
     >
       Submit

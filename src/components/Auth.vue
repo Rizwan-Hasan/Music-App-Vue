@@ -1,27 +1,27 @@
 <template>
   <!-- Auth Modal -->
-  <div class="fixed z-10 inset-0 overflow-y-auto" id="modal" v-bind:class="hiddenClass">
+  <div class="fixed inset-0 z-10 overflow-y-auto" id="modal" v-bind:class="hiddenClass">
     <div
-      class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+      class="flex min-h-screen items-end justify-center px-4 pb-20 pt-4 text-center sm:block sm:p-0"
     >
       <div class="fixed inset-0 transition-opacity">
         <div class="absolute inset-0 bg-gray-800 opacity-75"></div>
       </div>
 
       <!-- This element is to trick the browser into centering the modal contents. -->
-      <span class="hidden sm:inline-block sm:align-middle sm:h-screen">&#8203;</span>
+      <span class="hidden sm:inline-block sm:h-screen sm:align-middle">&#8203;</span>
 
       <div
-        class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+        class="inline-block transform overflow-hidden rounded-lg bg-white text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:align-middle"
       >
         <!-- Add margin if you want to see some of the overlay behind the modal-->
-        <div class="py-4 text-left px-6">
+        <div class="px-6 py-4 text-left">
           <!--Title-->
-          <div class="flex justify-between items-center pb-4">
+          <div class="flex items-center justify-between pb-4">
             <p class="text-2xl font-bold">Your Account</p>
             <!-- Modal Close Button -->
             <div
-              class="modal-close cursor-pointer z-50"
+              class="modal-close z-50 cursor-pointer"
               v-on:click.prevent="modalVisibility = false"
             >
               <i class="fas fa-times"></i>
@@ -29,13 +29,13 @@
           </div>
 
           <!-- Tabs -->
-          <ul class="flex flex-wrap mb-4">
+          <ul class="mb-4 flex flex-wrap">
             <li class="flex-auto text-center">
               <a
-                class="block rounded py-3 px-4 transition"
+                class="block rounded px-4 py-3 transition"
                 href="#"
                 v-bind:class="{
-                  'hover:text-white text-white bg-blue-600': tab === 'login',
+                  'bg-blue-600 text-white hover:text-white': tab === 'login',
                   'hover:text-blue-600': tab === 'register',
                 }"
                 v-on:click.prevent="tab = 'login'"
@@ -45,10 +45,10 @@
             </li>
             <li class="flex-auto text-center">
               <a
-                class="block rounded py-3 px-4 transition"
+                class="block rounded px-4 py-3 transition"
                 href="#"
                 v-bind:class="{
-                  'hover:text-white text-white bg-blue-600': tab === 'register',
+                  'bg-blue-600 text-white hover:text-white': tab === 'register',
                   'hover:text-blue-600': tab === 'login',
                 }"
                 v-on:click.prevent="tab = 'register'"
